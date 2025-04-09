@@ -7,3 +7,6 @@
 [submodule "javascript-demo"]
 	path = javascript-demo
 	url = https://github.com/mkoniari/DBLAB--Databases-NodeJS-Demo.git
+[submodule "java-demo"]
+	path = java-demo
+	url = https://github.com/mkoniari/DBLAB---Databases-Java-Demo.git
