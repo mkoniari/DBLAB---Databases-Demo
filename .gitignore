@@ -4,4 +4,5 @@ mysql_data/
 *.bat
 *.code-workspace
 *.url
-
+note.md
+.gitignore
