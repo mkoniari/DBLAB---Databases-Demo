@@ -1,9 +1,9 @@
-[submodule "javascript_demo"]
-	path = javascript_demo
-	url = https://github.com/mkoniari/DBLAB--Databases-NodeJS-Demo.git
 [submodule "php-demo"]
 	path = php-demo
 	url = https://github.com/mkoniari/DBLAB---Databases-PHP-Demo.git
 [submodule "python-demo"]
 	path = python-demo
 	url = https://github.com/mkoniari/DBLAB---Databases-Python-Demo.git
+[submodule "javascript-demo"]
+	path = javascript-demo
+	url = https://github.com/mkoniari/DBLAB--Databases-NodeJS-Demo.git
