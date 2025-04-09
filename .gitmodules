@@ -10,6 +10,3 @@
 [submodule "php-demo"]
 	path = php-demo
 	url = https://github.com/mkoniari/DBLAB---Databases-PHP-Demo.git
-[submodule "javascript-demo"]
-	path = javascript-demo
-	url = https://github.com/mkoniari/DBLAB--Databases-NodeJS-Demo.git
