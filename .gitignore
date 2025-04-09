@@ -1,0 +1,7 @@
+mysql_data/
+.env
+.vscode/
+*.bat
+*.code-workspace
+*.url
+

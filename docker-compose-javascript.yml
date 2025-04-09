@@ -1,0 +1,25 @@
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: DockerJavascript
+      args:
+        - NODEJS_PORT=${NODEJS_PORT:-3000}  # Pass NODEJS_PORT to Dockerfile
+    container_name: nodejs-container
+    ports:
+      - "${NODEJS_PORT}:${NODEJS_PORT}"
+    volumes:
+      - ./javascript_demo:/app
+    environment:
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PORT: ${MYSQL_PORT:-3306}
+      NODE_ENV: ${NODE_ENV:-development}
+      NODEJS_PORT: ${NODEJS_PORT}
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge

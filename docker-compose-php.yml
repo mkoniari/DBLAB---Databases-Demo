@@ -1,0 +1,24 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: DockerfilePHP
+    container_name: php-apache-container
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    volumes:
+      - ./php-demo/dbdemo:/var/www/html
+    environment:
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    # depends_on:
+    #  - mysql
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
+
+
