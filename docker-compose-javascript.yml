@@ -9,7 +9,8 @@ services:
     ports:
       - "${NODEJS_PORT}:${NODEJS_PORT}"
     volumes:
-      - ./javascript_demo:/app
+      - ./javascript-demo:/app
+      - /app/node_modules  # Preserve container's node_modules
     environment:
       MYSQL_HOST: ${MYSQL_HOST}
       MYSQL_USER: ${MYSQL_USER}

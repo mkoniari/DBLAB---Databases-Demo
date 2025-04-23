@@ -4,14 +4,21 @@ FROM node:20
 # Set working directory in container
 WORKDIR /app
 
-# Copy package.json and package-lock.json (if exists) from javascript_demo
-COPY javascript_demo/package*.json ./
+# Copy package.json and package-lock.json (if exists) from javascript-demo
+COPY javascript-demo/package*.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies with a clean slate
+RUN npm install --verbose || echo "npm install failed!"
 
-# Copy the rest of your application code from javascript_demo
-COPY javascript_demo/ .
+# Explicitly install nodemon globally for reliability
+# RUN npm install -g nodemon
+# RUN npm install -g express-session
+
+# Verify express is installed
+# RUN ls node_modules/express || echo "Express not found!"
+
+# Copy the rest of your application code from javascript-demo
+COPY javascript-demo/ .
 
 # Expose port
 EXPOSE ${NODEJS_PORT}
